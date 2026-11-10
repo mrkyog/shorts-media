@@ -1,0 +1,90 @@
+{
+  "id": "golden-record",
+  "title": "Voyager's Golden Record: Earth's message to aliens",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lead_in": 0.15,
+  "tail": 0.9,
+  "lines": [
+    {"id": "L1",  "gap": 0.24, "text": "There's a / golden record / flying out of / our solar system."},
+    {"id": "L2",  "gap": 0.30, "text": "It rides on / Voyager {One,|1,} / and a copy / flies on / Voyager {Two.|2.}"},
+    {"id": "L3",  "gap": 0.30, "text": "A {twelve-inch|12-inch} / gold-plated disc, / made for / whoever / finds it."},
+    {"id": "L4",  "gap": 0.30, "text": "It says hello / in {fifty-five|55} languages, / from ancient / Akkadian / to modern / Chinese."},
+    {"id": "L5",  "gap": 0.30, "text": "It hides / {one hundred fifteen|115} pictures / in its grooves."},
+    {"id": "L6",  "gap": 0.32, "text": "Thunder, / whales, / birdsong, / and {ninety|90} minutes / of music."},
+    {"id": "L7",  "gap": 0.30, "text": "The cover / shows how / to play it, / and a map / to our Sun, / using {fourteen|14} pulsars."},
+    {"id": "L8",  "gap": 0.32, "text": "There's even / a speck / of uranium, / a clock / to tell / how long ago / it left."},
+    {"id": "L9",  "gap": 0.36, "text": "And Voyager {One|1} / won't come within / {two|2} light-years / of another star / for about / {forty thousand|40,000} years."},
+    {"id": "L10", "gap": 0.0,  "text": "Follow for / part {three:|3:} / the photo / Voyager took / of us, / from the dark."}
+  ],
+  "assets": {
+    "record": "PIA14113.jpg",
+    "craft": "PIA17049.jpg",
+    "concept": "PIA04495.jpg",
+    "launch2": "PIA21744.jpg",
+    "prep": "PIA21741.jpg",
+    "earth": "PIA18033.jpg",
+    "storm": "iss071e170351.jpg",
+    "earth2": "GSFC_20171208_Archive_e001386.jpg",
+    "crab": "GSFC_20171208_Archive_e000273.jpg",
+    "dot": "PIA23645.jpg"
+  },
+  "shots": [
+    {"at": "0", "kind": "image", "src": "record", "stars": true,
+     "from": {"c": [0.42, 0.5], "zoom": 0.62, "anchor": [540, 860]}, "to": {"c": [0.42, 0.5], "zoom": 0.68, "anchor": [540, 860]},
+     "tags": [{"at": "-0.25", "label": "ON BOARD SINCE 1977", "value": "THE GOLDEN RECORD"}]},
+
+    {"at": "L2", "kind": "image", "src": "craft",
+     "from": {"c": [0.42, 0.5], "zoom": 1.0}, "to": {"c": [0.42, 0.48], "zoom": 1.1},
+     "tags": [{"at": "L2:It", "label": "COPIES IN SPACE", "value": "{v:.0f}", "count": [0, 1], "dur": 0.3},
+              {"at": "L2:copy", "label": "COPIES IN SPACE", "value": "{v:.0f}", "count": [1, 2], "dur": 0.3}]},
+
+    {"at": "L2:flies", "kind": "image", "src": "launch2",
+     "from": {"c": [0.5, 0.5], "zoom": 1.0}, "to": {"c": [0.5, 0.46], "zoom": 1.08},
+     "tags": [{"at": "L2:flies", "label": "COPIES IN SPACE", "value": "2"}]},
+
+    {"at": "L3", "kind": "image", "src": "prep",
+     "from": {"c": [0.5, 0.5], "zoom": 1.0}, "to": {"c": [0.5, 0.55], "zoom": 1.1},
+     "tags": [{"at": "L3:12inch", "label": "DIAMETER", "value": "12 INCHES"}]},
+
+    {"at": "L4", "kind": "image", "src": "earth", "stars": true,
+     "from": {"c": [0.5, 0.5], "zoom": 0.5, "anchor": [540, 880]}, "to": {"c": [0.5, 0.5], "zoom": 0.54, "anchor": [540, 880]},
+     "tags": [{"at": "L4:55", "label": "SPOKEN GREETINGS", "value": "{v:.0f} LANGUAGES", "count": [0, 55], "dur": 0.7}]},
+
+    {"at": "L5", "kind": "image", "src": "record", "stars": true,
+     "from": {"c": [0.36, 0.5], "zoom": 0.85, "anchor": [540, 880]}, "to": {"c": [0.36, 0.5], "zoom": 0.95, "anchor": [540, 880]},
+     "tags": [{"at": "L5:115", "label": "IMAGES ENCODED", "value": "{v:.0f}", "count": [0, 115], "dur": 0.7}]},
+
+    {"at": "L6", "kind": "image", "src": "storm",
+     "from": {"c": [0.45, 0.62], "zoom": 1.0}, "to": {"c": [0.45, 0.63], "zoom": 1.08},
+     "tags": [{"at": "L6:Thunder", "label": "SOUNDS OF EARTH", "value": "THUNDER"},
+              {"at": "L6:whales", "label": "SOUNDS OF EARTH", "value": "WHALES"},
+              {"at": "L6:birdsong", "label": "SOUNDS OF EARTH", "value": "BIRDSONG"}]},
+
+    {"at": "L6:and", "kind": "image", "src": "earth2", "stars": true,
+     "from": {"c": [0.5, 0.5], "zoom": 0.5, "anchor": [540, 880]}, "to": {"c": [0.5, 0.5], "zoom": 0.55, "anchor": [540, 880]},
+     "tags": [{"at": "L6:90", "label": "MUSIC", "value": "{v:.0f} MINUTES", "count": [0, 90], "dur": 0.6}]},
+
+    {"at": "L7", "kind": "image", "src": "record", "stars": true,
+     "from": {"c": [0.68, 0.32], "zoom": 0.9, "anchor": [540, 880]}, "to": {"c": [0.68, 0.32], "zoom": 1.0, "anchor": [540, 880]},
+     "tags": [{"at": "L7:The", "label": "ON THE COVER", "value": "HOW TO PLAY IT"}]},
+
+    {"at": "L7:using", "kind": "image", "src": "crab",
+     "from": {"c": [0.5, 0.5], "zoom": 1.0}, "to": {"c": [0.5, 0.5], "zoom": 1.12},
+     "tags": [{"at": "L7:14", "label": "PULSARS ON THE MAP", "value": "{v:.0f}", "count": [0, 14], "dur": 0.5}]},
+
+    {"at": "L8", "kind": "image", "src": "record", "stars": true, "dim": 0.85,
+     "from": {"c": [0.68, 0.30], "zoom": 1.05, "anchor": [540, 880]}, "to": {"c": [0.68, 0.30], "zoom": 1.15, "anchor": [540, 880]},
+     "tags": [{"at": "L8:uranium", "label": "URANIUM-238 HALF-LIFE", "value": "4.5 BILLION YRS"}]},
+
+    {"at": "L9", "kind": "image", "src": "concept",
+     "from": {"c": [0.35, 0.45], "zoom": 1.0}, "to": {"c": [0.40, 0.45], "zoom": 1.1},
+     "tags": [{"at": "L9:2", "label": "CLOSEST STAR PASS", "value": "1.7 LIGHT-YEARS"},
+              {"at": "L9:40000", "label": "VOYAGER 1 · CLOSE PASS", "value": "YEAR {v:,.0f} AD", "count": [2026, 40272], "dur": 0.8}]},
+
+    {"at": "L10", "kind": "image", "src": "dot", "dim": 0.8,
+     "from": {"c": [0.5, 0.5], "zoom": 1.0}, "to": {"c": [0.5, 0.5], "zoom": 1.12},
+     "tags": [{"at": "L10:part", "label": "NEXT · PART 3", "value": "PALE BLUE DOT"}],
+     "credit": "IMAGES: NASA / JPL-CALTECH / GSFC"}
+  ]
+}

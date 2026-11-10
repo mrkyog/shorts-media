@@ -1,0 +1,80 @@
+{
+  "id": "voyager-light-day",
+  "title": "Voyager 1: one light-day from Earth",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lead_in": 0.15,
+  "tail": 0.9,
+  "lines": [
+    {"id": "L1",  "gap": 0.16, "text": "Light reaches / the Moon / in about / a second."},
+    {"id": "L2",  "gap": 0.30, "text": "The Sun? / {Eight|8} minutes."},
+    {"id": "L3",  "gap": 0.34, "text": "But on / November {eighteenth,|18,} / a machine / from the {nineteen-seventies|1970s} / will be / so far away, / that light / needs a / full day / to reach it."},
+    {"id": "L4",  "gap": 0.20, "text": "This is / Voyager {One.|1.}"},
+    {"id": "L5",  "gap": 0.32, "text": "Launched in / {nineteen seventy-seven,|1977,} / it flies at / {seventeen|17} kilometers / every second."},
+    {"id": "L6",  "gap": 0.34, "text": "And it still took / {forty-nine|49} years / to cover / what light does / in a day."},
+    {"id": "L7",  "gap": 0.30, "text": "Now every command / takes a day / to arrive, / and another day / to answer."},
+    {"id": "L8",  "gap": 0.30, "text": "Its computers / have less memory / than one photo / on your phone."},
+    {"id": "L9",  "gap": 0.36, "text": "And a light-year? / At this speed, / that's over / {seventeen thousand|17,000} years / away."},
+    {"id": "L10", "gap": 0.0,  "text": "Follow for / part {two:|2:} / the message / it carries, / for whoever / finds it."}
+  ],
+  "assets": {
+    "moon": "GSFC_20171208_Archive_e000868.jpg",
+    "sun": "GSFC_20171208_Archive_e000790.jpg",
+    "concept": "PIA04495.jpg",
+    "interstellar": "PIA17462.jpg",
+    "launch": "PIA21747.jpg",
+    "dsn": "PIA26716.jpg",
+    "hardware": "PIA21477.jpg",
+    "record": "PIA21741.jpg"
+  },
+  "shots": [
+    {"at": "0", "kind": "image", "src": "moon", "stars": true,
+     "from": {"c": [0.5, 0.5], "zoom": 0.44, "anchor": [540, 850]}, "to": {"c": [0.5, 0.5], "zoom": 0.48, "anchor": [540, 850]},
+     "tags": [{"at": "-0.25", "label": "LIGHT TRAVEL TIME · EARTH → MOON", "value": "1.3 SEC"}]},
+
+    {"at": "L2", "kind": "image", "src": "sun", "stars": true,
+     "from": {"c": [0.5, 0.5], "zoom": 0.42, "anchor": [540, 850]}, "to": {"c": [0.5, 0.5], "zoom": 0.45, "anchor": [540, 850]},
+     "tags": [{"at": "L2:The", "label": "LIGHT TRAVEL TIME · SUN → EARTH", "value": "{v:.1f} MIN", "count": [0, 8.3], "dur": 0.5}]},
+
+    {"at": "L3", "kind": "image", "src": "concept",
+     "from": {"c": [0.44, 0.462], "zoom": 1.08}, "to": {"c": [0.43, 0.45], "zoom": 1.18},
+     "tags": [{"at": "L3:November", "label": "MILESTONE", "value": "NOV 18, 2026"}]},
+
+    {"at": "L3:will", "kind": "image", "src": "interstellar", "ease": "inout",
+     "from": {"c": [0.36, 0.50], "zoom": 1.0}, "to": {"c": [0.67, 0.46], "zoom": 1.0},
+     "tags": [{"at": "L3:so", "label": "LIGHT TRAVEL TIME · EARTH → VOYAGER 1", "value": "{v:.0f} HOURS", "count": [0, 24], "dur": 2.5, "ease": "inout"}]},
+
+    {"at": "L4", "kind": "image", "src": "interstellar",
+     "from": {"c": [0.675, 0.42], "zoom": 1.85}, "to": {"c": [0.675, 0.41], "zoom": 2.0},
+     "tags": [{"at": "L4:This", "label": "DISTANCE FROM EARTH", "value": "{v:.1f} BILLION KM", "count": [0, 25.9], "dur": 0.7}]},
+
+    {"at": "L5", "kind": "image", "src": "launch",
+     "from": {"c": [0.5, 0.52], "zoom": 1.0}, "to": {"c": [0.5, 0.50], "zoom": 1.05},
+     "tags": [{"at": "L5:Launched", "label": "LAUNCH DAY", "value": "SEPT 5, 1977"}]},
+
+    {"at": "L5:it", "kind": "image", "src": "launch",
+     "from": {"c": [0.5, 0.30], "zoom": 1.32}, "to": {"c": [0.5, 0.24], "zoom": 1.42},
+     "tags": [{"at": "L5:17", "label": "SPEED", "value": "{v:.0f} KM/S", "count": [0, 17], "dur": 0.6}]},
+
+    {"at": "L6", "kind": "race"},
+
+    {"at": "L7", "kind": "image", "src": "dsn",
+     "from": {"c": [0.5, 0.50], "zoom": 1.0}, "to": {"c": [0.5, 0.52], "zoom": 1.05},
+     "tags": [{"at": "L7:takes", "label": "SIGNAL · ONE WAY", "value": "{v:.0f} HOURS", "count": [0, 24], "dur": 0.6}]},
+
+    {"at": "L7:and", "kind": "image", "src": "dsn",
+     "from": {"c": [0.5, 0.62], "zoom": 1.22}, "to": {"c": [0.5, 0.60], "zoom": 1.30},
+     "tags": [{"at": "L7:another", "label": "SIGNAL · ROUND TRIP", "value": "{v:.0f} HOURS", "count": [24, 48], "dur": 0.6}]},
+
+    {"at": "L8", "kind": "image", "src": "hardware", "dim": 0.74,
+     "from": {"c": [0.5, 0.52], "zoom": 1.0}, "to": {"c": [0.5, 0.47], "zoom": 1.1},
+     "tags": [{"at": "L8:less", "label": "TOTAL COMPUTER MEMORY", "value": "{v:.0f} KB", "count": [0, 68], "dur": 0.6}]},
+
+    {"at": "L9", "kind": "scale"},
+
+    {"at": "L10", "kind": "image", "src": "record", "dim": 0.78,
+     "from": {"c": [0.60, 0.55], "zoom": 1.0}, "to": {"c": [0.64, 0.52], "zoom": 1.1},
+     "tags": [{"at": "L10:part", "label": "NEXT · PART 2", "value": "THE GOLDEN RECORD"}],
+     "credit": "IMAGES: NASA / JPL-CALTECH / GSFC / SDO"}
+  ]
+}

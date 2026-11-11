@@ -355,7 +355,7 @@ def space(t):
 
 
 # ------------------------------------------------------------------ image shots
-_src, _prep = {}, {}
+_src, _prep, _last_xf = {}, {}, {}
 
 
 def source(name):
@@ -397,6 +397,7 @@ def image_frame(shot, f, t):
     M = np.float32([[kw, 0, ax - kw * cx * fac], [0, kw, ay - kw * cy * fac]])
     interp = cv2.INTER_CUBIC if kw > 1.001 else cv2.INTER_LINEAR
     frame = cv2.warpAffine(work, M, (W, H), flags=interp, borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0))
+    _last_xf[shot["i"]] = (M, fac, sw, sh)
     if shot.get("stars"):
         s = (stars(t, 0.85)[..., None] * np.array((232, 238, 255), np.float32)).astype(np.uint8)
         frame = np.maximum(frame, s)
@@ -494,7 +495,25 @@ def scale_frame(shot, f, t):
     return frame
 
 
-KINDS = {"image": image_frame, "race": race_frame, "scale": scale_frame}
+def dot_frame(shot, f, t):
+    """An image shot plus a pulsing ring around a point of the source picture.
+    shot["ring"] = {"p": [x, y] (fractions of the source), "at": ref (optional), "r": radius px}"""
+    frame = image_frame(shot, f, t)
+    rg = shot["ring"]
+    t_on = when(rg["at"]) if "at" in rg else shot["t0"]
+    a = ease((t - t_on) / 0.35, "out")
+    if a <= 0:
+        return frame
+    M, fac, sw, sh = _last_xf[shot["i"]]
+    x = M[0, 0] * rg["p"][0] * sw * fac + M[0, 2]
+    y = M[1, 1] * rg["p"][1] * sh * fac + M[1, 2]
+    r = rg.get("r", 46) * (1.0 + 0.08 * np.sin((t - t_on) * 4.0)) * (1.6 - 0.6 * a)
+    over = frame.copy()
+    cv2.circle(over, (int(round(x)), int(round(y))), int(round(r)), GOLD, 4, cv2.LINE_AA)
+    return cv2.addWeighted(over, a, frame, 1 - a, 0)
+
+
+KINDS = {"image": image_frame, "race": race_frame, "scale": scale_frame, "dot": dot_frame}
 
 
 def render(f):

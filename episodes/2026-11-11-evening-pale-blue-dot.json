@@ -1,0 +1,84 @@
+{
+  "id": "pale-blue-dot",
+  "title": "The Pale Blue Dot: Voyager's photo of Earth from 6 billion km",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "lead_in": 0.15,
+  "tail": 0.9,
+  "lines": [
+    {"id": "L1",  "gap": 0.26, "text": "See that / tiny speck? / That's Earth, / and everyone / you've ever known."},
+    {"id": "L2",  "gap": 0.30, "text": "Voyager {One|1} / snapped it / on February {fourteenth,|14,} / {nineteen ninety.|1990.}"},
+    {"id": "L3",  "gap": 0.30, "text": "It was about / {six|6} billion kilometers / from the Sun."},
+    {"id": "L4",  "gap": 0.30, "text": "Carl Sagan / first had / the idea / back in {nineteen eighty-one.|1981.}"},
+    {"id": "L5",  "gap": 0.30, "text": "Voyager / turned around / and shot / {sixty|60} frames, / a family portrait / of our planets."},
+    {"id": "L6",  "gap": 0.30, "text": "It caught / six planets. / Mars was lost / in sunlight, / and Mercury / sat too close / to the Sun."},
+    {"id": "L7",  "gap": 0.34, "text": "And Earth? / Just {zero point one two|0.12} / of a single pixel."},
+    {"id": "L8",  "gap": 0.30, "text": "That streak / across it? / A ray of sunlight / scattered / in the camera."},
+    {"id": "L9",  "gap": 0.30, "text": "{Thirty-four|34} minutes later, / Voyager's cameras / were switched off."},
+    {"id": "L10", "gap": 0.34, "text": "And the pictures / took until May / to make it home."},
+    {"id": "L11", "gap": 0.0,  "text": "Follow for / part {four:|4:} / what happens / when Voyager's / power runs out."}
+  ],
+  "assets": {
+    "dot": "PIA23645.jpg",
+    "orig": "PIA00452.jpg",
+    "craft": "PIA17049.jpg",
+    "concept": "PIA04495.jpg",
+    "persp": "PIA23681.jpg",
+    "mosaic": "PIA00451.jpg",
+    "six": "PIA00453.jpg",
+    "inter": "PIA17462.jpg"
+  },
+  "shots": [
+    {"at": "0", "kind": "dot", "src": "dot",
+     "from": {"c": [0.594, 0.52], "zoom": 3.2, "anchor": [540, 860]}, "to": {"c": [0.594, 0.52], "zoom": 3.8, "anchor": [540, 860]},
+     "ring": {"p": [0.594, 0.52], "r": 46},
+     "tags": [{"at": "-0.25", "label": "VOYAGER 1 · 1990", "value": "PALE BLUE DOT"}]},
+
+    {"at": "L2", "kind": "image", "src": "craft", "stars": true,
+     "from": {"c": [0.40, 0.5], "zoom": 1.0}, "to": {"c": [0.42, 0.48], "zoom": 1.1},
+     "tags": [{"at": "L2:14", "label": "PHOTO TAKEN", "value": "FEB 14, 1990"}]},
+
+    {"at": "L3", "kind": "image", "src": "persp",
+     "from": {"c": [0.5, 0.5], "zoom": 1.0}, "to": {"c": [0.5, 0.5], "zoom": 1.12},
+     "tags": [{"at": "L3:6", "label": "DISTANCE FROM THE SUN", "value": "{v:.0f} BILLION KM", "count": [0, 6], "dur": 0.7}]},
+
+    {"at": "L4", "kind": "image", "src": "concept",
+     "from": {"c": [0.36, 0.42], "zoom": 1.0}, "to": {"c": [0.38, 0.42], "zoom": 1.1},
+     "tags": [{"at": "L4:1981", "label": "CARL SAGAN'S IDEA", "value": "{v:.0f}", "count": [1900, 1981], "dur": 0.6}]},
+
+    {"at": "L5", "kind": "image", "src": "mosaic", "stars": true,
+     "from": {"c": [0.22, 0.5], "zoom": 0.42, "anchor": [540, 860]}, "to": {"c": [0.78, 0.5], "zoom": 0.42, "anchor": [540, 860]},
+     "ease": "inout",
+     "tags": [{"at": "L5:60", "label": "FAMILY PORTRAIT", "value": "{v:.0f} FRAMES", "count": [0, 60], "dur": 0.6}]},
+
+    {"at": "L6", "kind": "image", "src": "six",
+     "from": {"c": [0.5, 0.5], "zoom": 0.37, "anchor": [540, 840]}, "to": {"c": [0.5, 0.5], "zoom": 0.40, "anchor": [540, 840]},
+     "tags": [{"at": "L6:six", "label": "PLANETS CAPTURED", "value": "{v:.0f}", "count": [0, 6], "dur": 0.4},
+              {"at": "L6:Mars", "label": "MISSED", "value": "MARS"},
+              {"at": "L6:Mercury", "label": "MISSED", "value": "MARS · MERCURY"}]},
+
+    {"at": "L7", "kind": "dot", "src": "dot",
+     "from": {"c": [0.594, 0.52], "zoom": 5.0, "anchor": [540, 860]}, "to": {"c": [0.594, 0.52], "zoom": 6.5, "anchor": [540, 860]},
+     "ring": {"p": [0.594, 0.52], "r": 40},
+     "tags": [{"at": "L7:012", "label": "EARTH IN THE FRAME", "value": "0.12 PIXEL"}]},
+
+    {"at": "L8", "kind": "image", "src": "dot",
+     "from": {"c": [0.58, 0.5], "zoom": 1.0}, "to": {"c": [0.58, 0.52], "zoom": 1.25},
+     "tags": [{"at": "L8:A", "label": "THAT STREAK", "value": "SUNLIGHT"}]},
+
+    {"at": "L9", "kind": "image", "src": "inter",
+     "from": {"c": [0.62, 0.45], "zoom": 1.0}, "to": {"c": [0.62, 0.45], "zoom": 1.1},
+     "tags": [{"at": "L9:34", "label": "EARTH PHOTOS", "value": "04:48 GMT"},
+              {"at": "L9:were", "label": "CAMERAS OFF", "value": "05:22 GMT"}]},
+
+    {"at": "L10", "kind": "image", "src": "orig", "dim": 0.85,
+     "from": {"c": [0.5, 0.5], "zoom": 1.0}, "to": {"c": [0.5, 0.5], "zoom": 1.1},
+     "tags": [{"at": "L10:May", "label": "DATA HOME BY", "value": "MAY 1, 1990"}]},
+
+    {"at": "L11", "kind": "dot", "src": "dot", "dim": 0.85,
+     "from": {"c": [0.594, 0.52], "zoom": 1.6, "anchor": [540, 860]}, "to": {"c": [0.594, 0.52], "zoom": 2.2, "anchor": [540, 860]},
+     "ring": {"p": [0.594, 0.52], "r": 40},
+     "tags": [{"at": "L11:part", "label": "NEXT · PART 4", "value": "POWER RUNS OUT"}],
+     "credit": "IMAGES: NASA / JPL-CALTECH"}
+  ]
+}
